@@ -162,6 +162,7 @@
   if ((self = [super init])) {
     _contentType = nil;
     _contentLength = NSUIntegerMax;
+    _gzipContentEncodingEnabled = YES;
     _statusCode = kGCDWebServerHTTPStatusCode_OK;
     _cacheControlMaxAge = 0;
     _additionalHeaders = [[NSMutableDictionary alloc] init];
