@@ -92,7 +92,7 @@
 - (id)jsonObject {
   if (_jsonObject == nil) {
     NSString* mimeType = GCDWebServerTruncateHeaderValue(self.contentType);
-    if ([mimeType isEqualToString:@"application/json"] || [mimeType isEqualToString:@"text/json"] || [mimeType isEqualToString:@"text/javascript"]) {
+    if ([mimeType isEqualToString:@"application/json"] || [mimeType isEqualToString:@"text/json"] || [mimeType isEqualToString:@"text/javascript"] || [mimeType isEqualToString:@"application/gzip"]) {
       _jsonObject = [NSJSONSerialization JSONObjectWithData:_data options:0 error:NULL];
     } else {
       GWS_DNOT_REACHED();
